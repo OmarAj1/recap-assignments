@@ -18,7 +18,6 @@
         // prompt user to enter numbers
         var num1 = parseFloat(prompt("Enter first number:"));
         var num2 = parseFloat(prompt("Enter second number:"));
-    
 
         // Noa
         // function returns false/ true and console.log if theres a wrong input
@@ -27,10 +26,10 @@
                 alert("Invalid Number");
                 return false;
             } else if (
-                operator !== "1" &&
-                operator !== "2" &&
-                operator !== "3" &&
-                operator !== "4"
+                operator !== '1' &&
+                operator !== '2' &&
+                operator !== '3' &&
+                operator !== '4'
             ) {
                 alert("Invalid Operator");
                 return false;
@@ -39,47 +38,54 @@
             }
         };
 
-    // dania  
-    if(inputValidation(num1, num2, action)){
-        function calculator1(operator){
+        //  toni
+        function sum(value1, value2) {
+            return value1 + value2;
+        }
+        function subtract(value1, value2) {
+            return value1 - value2;
+        }
+        function multiply(value1, value2) {
+            return value1 * value2;
+        }
+        function division(value1, value2) {
+            return value1 / value2;
+        }
+        function power(value1, value2) {
+            return Math.pow(value1, value2);
+        }
+        function qureRoot(value1, value2) {
+            return Math.sqrt(value1).toFixed(2) && Math.sqrt(value2).toFixed(2);
+        }
+        function remainder(value1, value2) {
+          return value1 % value2;
+        }
+
+            // dania
+        function calculator1(operator, value1, value2){
             switch(operator) {
                 case ("1"):
-                    alert('the result is'+sum(value1,value2))
+                    alert('the result is '+ sum(value1,value2))
                     break;
                 case ("2"):
-                    alert('the result is'+subtract(value1,value2))
+                    alert('the result is '+ subtract(value1,value2))
                     break;
                 case ("3"):
-                    alert('the result is'+multiply(value1,value2))
+                    alert('the result is '+ multiply(value1,value2))
                     break;
                 case ("4"):
-                    alert('the result is'+division(value1,value2))
-                break;
+                    alert('the result is '+ division(value1,value2))
+                    break;
+                default: alert('something went wrong');
             } 
         }
+
+        const checkVal = inputValidation(num1, num2, action);  
+        // console.log(checkVal);
+        if(checkVal){
+            calculator1(action)
+        }
     }
-        //  toni
-    function sum(value1, value2) {
-      return value1 + value2;
-    }
-    function subtract(value1, value2) {
-      return value1 - value2;
-    }
-    function multiply(value1, value2) {
-      return value1 * value2;
-    }
-    function division(value1, value2) {
-      return value1 / value2;
-    }
-    function power(value1, value2) {
-      return Math.pow(value1, value2);
-    }
-    function qureRoot(value1, value2) {
-      return Math.sqrt(value1).toFixed(2) && Math.sqrt(value2).toFixed(2);
-    }
-    function remainder(value1, value2) {
-      return value1 % value2;
-    }}
     calculator();
     </script>
 </html>

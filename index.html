@@ -1,23 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+</html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
 
-  <body></body>
-  <script>
-    //  calculator assignment
+    <body></body>
+    <script>
+        //  calculator assignment
 
-    // omar
+        // omar
+    function calculator() {
 
-    // dania
+        // prompt user to select an action
+        var action = prompt("Select an action: 1) add 2) subtract 3) multiply 4) divide");
+        // prompt user to enter numbers
+        var num1 = parseFloat(prompt("Enter first number:"));
+        var num2 = parseFloat(prompt("Enter second number:"));
+    
 
-    // Noa
+        // Noa
+        // function returns false/ true and console.log if theres a wrong input
+        const inputValidation = (a, b, operator) => {
+            if (isNaN(a) || isNaN(b)) {
+                alert("Invalid Number");
+                return false;
+            } else if (
+                operator !== "+" &&
+                operator !== "-" &&
+                operator !== "/" &&
+                operator !== "*"
+            ) {
+                alert("Invalid Operator");
+                return false;
+            } else {
+                return true;
+            }
+        };
 
-    //  toni
+    // dania  
+function calculator(operator){
+    
+    switch(operator) {
+        case ("+"):
+      alert('the result is'+sum(value1,value2))
+         
+          break;
+        case ("-"):
+            alert('the result is'+subtract(value1,value2))
+          break;
+          case ("*"):
+            alert('the result is'+multiply(value1,value2))
+          break;
+          case ("/"):
+            alert('the result is'+division(value1,value2))
+          break;
+
+        default:
+          // code block
+      } 
+}
+        //  toni
     function sum(value1, value2) {
       return value1 + value2;
     }
@@ -38,6 +82,6 @@
     }
     function remainder(value1, value2) {
       return value1 % value2;
-    }
-  </script>
+    }}
+    </script>
 </html>

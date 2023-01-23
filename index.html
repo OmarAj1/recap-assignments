@@ -27,10 +27,10 @@
                 alert("Invalid Number");
                 return false;
             } else if (
-                operator !== "+" &&
-                operator !== "-" &&
-                operator !== "/" &&
-                operator !== "*"
+                operator !== "1" &&
+                operator !== "2" &&
+                operator !== "3" &&
+                operator !== "4"
             ) {
                 alert("Invalid Operator");
                 return false;
@@ -40,27 +40,24 @@
         };
 
     // dania  
-function calculator(operator){
-    
-    switch(operator) {
-        case ("+"):
-      alert('the result is'+sum(value1,value2))
-         
-          break;
-        case ("-"):
-            alert('the result is'+subtract(value1,value2))
-          break;
-          case ("*"):
-            alert('the result is'+multiply(value1,value2))
-          break;
-          case ("/"):
-            alert('the result is'+division(value1,value2))
-          break;
-
-        default:
-          // code block
-      } 
-}
+    if(inputValidation(num1, num2, action)){
+        function calculator1(operator){
+            switch(operator) {
+                case ("1"):
+                    alert('the result is'+sum(value1,value2))
+                    break;
+                case ("2"):
+                    alert('the result is'+subtract(value1,value2))
+                    break;
+                case ("3"):
+                    alert('the result is'+multiply(value1,value2))
+                    break;
+                case ("4"):
+                    alert('the result is'+division(value1,value2))
+                break;
+            } 
+        }
+    }
         //  toni
     function sum(value1, value2) {
       return value1 + value2;
@@ -83,5 +80,6 @@ function calculator(operator){
     function remainder(value1, value2) {
       return value1 % value2;
     }}
+    calculator();
     </script>
 </html>

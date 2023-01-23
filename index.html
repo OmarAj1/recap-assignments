@@ -1,34 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
+</html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
 
-<body>
-
-</body>
+<body></body>
 <script>
-    //  calculator assignment 
+    //  calculator assignment
 
-    // omar     
+    // omar
     function calculator() {
 
         // prompt user to select an action
-        var action = prompt("Select an action: 1) add 2) subtract 3) multiply 4) divide");
-
+        let action = prompt("Select an action: 1 => add 2 => subtract 3 => multiply 4 => divide 5 => power 6=> squareRoot 7=> remainder  ");
         // prompt user to enter numbers
-        var num1 = parseFloat(prompt("Enter first number:"));
-        var num2 = parseFloat(prompt("Enter second number:"));
+        let num1 = prompt("Enter first number:");
+        let num2 = prompt("Enter second number:");
+
+        // Noa
+        // function returns false/ true and console.log if theres a wrong input
+        const inputValidation = (a, b, operator) => {
+            if (isNaN(a) || isNaN(b)) {
+                alert("Invalid Number");
+                return false;
+            } else if (
+                operator !== 1 &&
+                operator !== 2 &&
+                operator !== 3 &&
+                operator !== 4
+            ) {
+                alert("Invalid Operator");
+                return false;
+            } else {
+                return true;
+            }
+        };
+
+        // dania  
+        if (inputValidation(num1, num2, action)) {
+            function calculator(action) {
+
+                switch (action) {
+                    case (1):
+                        alert('the result is' + sum(num1, num2))
+
+                        break;
+                    case (2):
+                        alert('the result is' + subtract(num1, num2))
+                        break;
+                    case (3):
+                        alert('the result is' + multiply(num1, num2))
+                        break;
+                    case (4):
+                        alert('the result is' + division(num1, num2))
+                        break;
+                    case (5):
+                        alert('the result is' + power(num1, num2))
+                        break;
+                    case (6):
+                        alert('the result is' + squreRoot(num1, num2))
+                        break;
+                    case (7):
+                        alert('the result is' + remainder(num1, num2))
+                        break;
+                }
+            }
+        }
+        //  toni
+        function sum(num1, num2) {
+            return num1 + num2;
+        }
+
+        function subtract(num1, num2) {
+            return num1 - num2;
+        }
+
+        function multiply(num1, num2) {
+            return num1 * num2;
+        }
+
+        function division(num1, num2) {
+            return num1 / num2;
+        }
+
+        function power(num1, num2) {
+            return Math.pow(num1, num2);
+        }
+
+        function squreRoot(num1, num2) {
+            return Math.sqrt(num1).toFixed(2) && Math.sqrt(num2).toFixed(2);
+        }
+
+        function remainder(num1, num2) {
+            return num1 % num2;
+        }
     }
-    // dania  
-
-    // Noa 
-
-    //  toni
+    calculator();
 </script>
 
 </html>

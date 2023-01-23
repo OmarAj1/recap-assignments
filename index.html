@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <body></body>
+    <script>
+        //  calculator assignment
 
-<body>
-
-</body>
-<script>
-    //  calculator assignment 
-
-    // omar     
+        // omar
     function calculator() {
 
         // prompt user to select an action
@@ -24,11 +21,28 @@
         var num1 = parseFloat(prompt("Enter first number:"));
         var num2 = parseFloat(prompt("Enter second number:"));
     }
-    // dania  
 
-    // Noa 
+        // Noa
+        // function returns false/ true and console.log if theres a wrong input
+        const inputValidation = (a, b, operator) => {
+            if (isNaN(a) || isNaN(b)) {
+                alert("Invalid Number");
+                return false;
+            } else if (
+                operator !== "+" &&
+                operator !== "-" &&
+                operator !== "/" &&
+                operator !== "*"
+            ) {
+                alert("Invalid Operator");
+                return false;
+            } else {
+                return true;
+            }
+        };
+        // dania
 
-    //  toni
-</script>
-
+        //  toni
+    </script>
 </html>
+

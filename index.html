@@ -16,7 +16,6 @@
 
         // prompt user to select an action
         var action = prompt("Select an action: 1) add 2) subtract 3) multiply 4) divide");
-
         // prompt user to enter numbers
         var num1 = parseFloat(prompt("Enter first number:"));
         var num2 = parseFloat(prompt("Enter second number:"));
@@ -40,8 +39,29 @@
                 return true;
             }
         };
-        // dania
 
+    // dania  
+function calculator(operator){
+    
+    switch(operator) {
+        case ("+"):
+      alert('the result is'+sum(value1,value2))
+         
+          break;
+        case ("-"):
+            alert('the result is'+subtract(value1,value2))
+          break;
+          case ("*"):
+            alert('the result is'+multiply(value1,value2))
+          break;
+          case ("/"):
+            alert('the result is'+division(value1,value2))
+          break;
+
+        default:
+          // code block
+      } 
+}
         //  toni
     </script>
 </html>

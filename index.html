@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <body></body>
+    <script>
+        //  calculator assignment
 
-<body>
+        // omar
 
-</body>
-<script>
-    //  calculator assignment 
+        // dania
 
-    // omar     
-    
-    // dania  
-
-    // Noa 
-
-    //  toni
-</script>
-
+        // Noa
+        // function returns false/ true and console.log if theres a wrong input
+        const inputValidation = (a, b, operator) => {
+            if (isNaN(a) || isNaN(b)) {
+                alert("Invalid Number");
+                return false;
+            } else if (
+                operator !== "+" &&
+                operator !== "-" &&
+                operator !== "/" &&
+                operator !== "*"
+            ) {
+                alert("Invalid Operator");
+                return false;
+            } else {
+                return true;
+            }
+        };
+        //  toni
+    </script>
 </html>

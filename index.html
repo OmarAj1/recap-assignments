@@ -1,84 +1,84 @@
-</html>
+    </html>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
 
-<body></body>
-<script>
-    function calculator(num1, num2, action) {
-        action = prompt("Select an action:\n 1 => add \n 2 => subtract\n 3 => multiply\n 4 => divide\n 5 => power \n 6=> squareRoot \n 7=> remainder  ");
-        num1 = prompt("Enter first number:");
-        if (isNaN(num1)) {
-            alert("Invalid Number");
+    <body></body>
+    <script>
+        function calculator(num1, num2, action) {
+            action = prompt("Select an action:\n 1 => add \n 2 => subtract\n 3 => multiply\n 4 => divide\n 5 => power \n 6=> squareRoot \n 7=> remainder  ");
+            num1 = prompt("Enter first number:");
+            if (isNaN(num1)) {
+                alert("Invalid Number");
+                calculator();
+            } else {
+                num2 = prompt("Enter second number:");
+
+            }
+
+            switch (action) {
+                case ("1"):
+                    alert('the result is ' + sum(num1, num2))
+                    break;
+                case ("2"):
+                    alert('the result is ' + subtract(num1, num2))
+                    break;
+                case ("3"):
+                    alert('the result is ' + multiply(num1, num2))
+                    break;
+                case ("4"):
+                    alert('the result is ' + division(num1, num2))
+                    break;
+                case ("5"):
+                    alert('the result is ' + power(num1, num2))
+                    break;
+                case ("6"):
+                    alert('the result is ' + SquareRoot(num1, num2))
+                    break;
+                case ("7"):
+                    alert('the result is ' + remainder(num1, num2))
+                    break;
+                default:
+                    alert('invalid Operator')
+            }
+
+            function sum(num1, num2) {
+                let sum = parseInt(num1) + parseInt(num2);
+                return sum;
+                console.log(sum);
+            }
+
+            function subtract(num1, num2) {
+                return num1 - num2;
+            }
+
+            function multiply(num1, num2) {
+                return num1 * num2;
+            }
+
+            function division(num1, num2) {
+                return num1 / num2;
+            }
+
+            function power(num1, num2) {
+                return Math.pow(num1, num2);
+            }
+
+            function SquareRoot(num1, num2) {
+                return Math.sqrt(num1).toFixed(2) && Math.sqrt(num2).toFixed(2);
+            }
+
+            function remainder(num1, num2) {
+                return num1 % num2;
+            }
             calculator();
-        } else {
-            num2 = prompt("Enter second number:");
 
-        }
-
-        switch (action) {
-            case ("1"):
-                alert('the result is ' + sum(num1, num2))
-                break;
-            case ("2"):
-                alert('the result is ' + subtract(num1, num2))
-                break;
-            case ("3"):
-                alert('the result is ' + multiply(num1, num2))
-                break;
-            case ("4"):
-                alert('the result is ' + division(num1, num2))
-                break;
-            case ("5"):
-                alert('the result is ' + power(num1, num2))
-                break;
-            case ("6"):
-                alert('the result is ' + SquareRoot(num1, num2))
-                break;
-            case ("7"):
-                alert('the result is ' + remainder(num1, num2))
-                break;
-            default:
-                alert('invalid Operator')
-        }
-
-        function sum(num1, num2) {
-            let sum = parseInt(num1) + parseInt(num2);
-            return sum;
-            console.log(sum);
-        }
-
-        function subtract(num1, num2) {
-            return num1 - num2;
-        }
-
-        function multiply(num1, num2) {
-            return num1 * num2;
-        }
-
-        function division(num1, num2) {
-            return num1 / num2;
-        }
-
-        function power(num1, num2) {
-            return Math.pow(num1, num2);
-        }
-
-        function SquareRoot(num1, num2) {
-            return Math.sqrt(num1).toFixed(2) && Math.sqrt(num2).toFixed(2);
-        }
-
-        function remainder(num1, num2) {
-            return num1 % num2;
         }
         calculator();
+    </script>
 
-    }
-    calculator();
-</script>
-
-</html>
+    </html>
